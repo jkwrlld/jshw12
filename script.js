@@ -78,3 +78,31 @@ const zarplata = {
 };
 
 console.log(countTotalSalary(zarplata));
+
+// Завдання 5
+// Напиши функцію getAllPropValues(arr, prop), яка отримує масив об'єктів і ім'я властивості. Повертає масив значень певної властивості prop з кожного об'єкта в масиві.
+
+function getAllPropValues(arr, prop) {
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    const elment = arr[i];
+    if (prop in elment) {
+      result.push(elment[prop]);
+    }
+    console.log(elment);
+    console.log(elment[prop]);
+  }
+}
+
+const products = [
+  { name: "Apple", price: 30, quantity: 3 },
+  { name: "Banana", price: 20, quantity: 5 },
+  { name: "Orange", price: 25, quantity: 2 },
+];
+getAllPropValues(products, "name");
+
+// Завдання 6
+// Напиши функцію calculateTotalPrice(allProdcuts, productName), яка отримує масив об'єктів та ім'я продукту (значення властивості name). Повертає загальну вартість продукту (ціна * кількість).
+// Викличи функції для перевірки працездатності твоєї реалізації.
+
+function calculateTotalPrice(allProdcuts, productName) {}
